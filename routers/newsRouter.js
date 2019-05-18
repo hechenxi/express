@@ -20,7 +20,9 @@ var imgUrlFun = function(str){
 // connection.connect()
 
 var router = express.Router()
-// router.get('/', (req, res, next) => {
+router.get('/', (req, res, next) => {
+  console.log(req.ip)
+  res.send('hello\nsuccess')
 //    if(req.query.page){
 //       let  sql = 'SELECT id,abstract,title,cover_img_url,source_logo_url,source_name,date FROM news WHERE id<'+req.query.page+' ORDER BY id DESC LIMIT 0,5'
 //       //查
@@ -53,7 +55,7 @@ var router = express.Router()
 //       }
 //       res.send(result)
 //    })
-// })
+})
 // router.get('/morecomments', (req, res, next) => {
 //    if (req.query.bottom_comment_id&&req.query.newsId){
 //       let  sql = 'SELECT * FROM comments WHERE id<'+req.query.bottom_comment_id+' AND news_id='+req.query.newsId+' ORDER BY id DESC LIMIT 0,5'
